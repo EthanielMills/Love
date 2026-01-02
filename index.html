@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For You 🤍</title>
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #111, #2b2b2b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, serif;
+  color: #fff;
+}
+.card {
+  background: rgba(255,255,255,0.08);
+  padding: 28px;
+  border-radius: 20px;
+  max-width: 340px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255,255,255,0.15);
+}
+#text {
+  margin-top: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 80px;
+}
+.tap {
+  margin-top: 15px;
+  font-size: 13px;
+  opacity: 0.7;
+}
+</style>
+</head>
+<body>
+
+<div class="card" onclick="nextText()">
+  <h2>Tap anywhere.</h2>
+  <div id="text"></div>
+  <div class="tap">(tap again)</div>
+</div>
+
+<script>
+const lines = [
+  "I don’t need grand things.",
+  "I just need you — staying.",
+  "Even on days we don’t say much.",
+  "You’re still my favorite place.",
+  "Always."
+];
+
+let index = 0;
+
+function nextText() {
+  if (index < lines.length) {
+    document.getElementById("text").innerHTML += "<p>" + lines[index] + "</p>";
+    index++;
+  }
+}
+</script>
+
+</body>
+  </html>
+  
